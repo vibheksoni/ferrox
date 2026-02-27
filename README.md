@@ -351,8 +351,18 @@ This project is for educational and research purposes only. It demonstrates adva
 
 ## License
 
-MIT License - See LICENSE file for details.
+[MIT](LICENSE)
 
 ## Author
 
-Research project exploring Windows internals, evasion techniques, and polymorphic code generation.
+[vibheksoni](https://github.com/vibheksoni)
+
+Currently open to work. If you're looking for someone with security research, malware analysis, reverse engineering, or full-stack development experience - hit me up.
+
+- X/Twitter: [@ImVibhek](https://x.com/ImVibhek)
+- Website: [vibheksoni.com](https://vibheksoni.com/)
+- GitHub: [vibheksoni](https://github.com/vibheksoni)
+
+---
+
+*Remember: With great power comes great responsibility. Use this knowledge to make the internet safer, not more dangerous.*
