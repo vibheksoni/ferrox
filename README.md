@@ -361,6 +361,7 @@ Currently open to work. If you're looking for someone with security research, ma
 
 - X/Twitter: [@ImVibhek](https://x.com/ImVibhek)
 - Website: [vibheksoni.com](https://vibheksoni.com/)
+- Security Blog: [opendoors.wtf](https://opendoors.wtf/)
 - GitHub: [vibheksoni](https://github.com/vibheksoni)
 
 ---
